@@ -45,3 +45,37 @@ for (let row = 1; row <= 4; row++) {
   }
   console.log(output)
 }
+
+/* Pattern-4 
+1
+22
+333
+4444
+55555
+*/
+
+for (let row = 1; row <= 5; row++) {
+  // rows
+  let output = ''
+  for (let col = 1; col <= row; col++) {
+    output += row
+  }
+  console.log(output)
+}
+
+/* --- Pattern-5
+*****
+****
+***
+**
+*
+--- */
+
+for (let row = 5; row >= 1; row--) {
+  // rows
+  let output = ''
+  for (let col = 1; col <= row; col++) {
+    output += '*'
+  }
+  console.log(output)
+}
