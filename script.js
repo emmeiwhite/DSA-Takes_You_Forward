@@ -79,3 +79,12 @@ for (let row = 5; row >= 1; row--) {
   }
   console.log(output)
 }
+
+for (let row = 5; row >= 1; row--) {
+  // rows
+  let output = ''
+  for (let col = 1; col <= row; col++) {
+    output += col
+  }
+  console.log(output)
+}
