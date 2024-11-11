@@ -1,3 +1,4 @@
-import pattern from './1.0-basic-patterns.js'
+// import pattern from './1.0-basic-patterns.js'
+import intermediatePatterns from './2.0-intermediate-patterns.js'
 
-pattern(5)
+intermediatePatterns(5)
