@@ -15,7 +15,7 @@ export default function pattern(n) {
     console.log(`\n`)
   }
 }
-  */
+
 
 /** Patter-2
  *  *
@@ -25,17 +25,16 @@ export default function pattern(n) {
  *  * * * * *
  */
 
-/** Solution 2
+/** Solution 2  */
 export default function pattern(n) {
   for (let i = 0; i < n; i++) {
     let starsInLine = ''
-    for (let j = 0; j < i; j++) {
+    for (let j = 0; j <= i; j++) {
       starsInLine += '* '
     }
     console.log(`${starsInLine}`)
   }
 }
- */
 
 /** Patter-3
  *  1
