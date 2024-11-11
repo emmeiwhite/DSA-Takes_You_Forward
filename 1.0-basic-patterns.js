@@ -77,12 +77,31 @@ export default function pattern(n) {
 }
 --- */
 
-/*----- BUG FIX -----*/
+/*----- BUG FIX
 export default function pattern(n) {
   for (let i = 0; i < n; i++) {
     let numbersLine = ''
     for (let j = 0; j <= i; j++) {
       numbersLine += `${i + 1} ` // Pattern outputs i each time here, we have to be cautious of the requirement
+    }
+    console.log(`${numbersLine}`)
+  }
+}
+ -----*/
+
+/** Patter-5
+ *  1 2 3 4 5
+ *  1 2 3 4
+ *  1 2 3
+ *  1 2
+ *  1
+ */
+
+export default function pattern(n) {
+  for (let i = 0; i < n; i++) {
+    let numbersLine = ''
+    for (let j = 0; j < n - i; j++) {
+      numbersLine += `${j + 1} `
     }
     console.log(`${numbersLine}`)
   }
