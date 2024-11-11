@@ -39,6 +39,7 @@ export default function intermediatePatterns(n) {
  *     *
  */
 
+/* ---
 export default function intermediatePatterns(n) {
   for (let i = 0; i < n; i++) {
     // Print Spaces
@@ -60,3 +61,19 @@ export default function intermediatePatterns(n) {
     console.log(row)
   }
 }
+  --- */
+
+// The Above solution works but it was a hit & trial
+
+// Let's Follow this logic (USING 3 independent sub-loops)
+
+/*  --- 3 loops within, One to render stars, two to render spaces
+  
+space,  stars,   space
+[0,       9 ,      0]
+[1,       7 ,      1]
+[2,       5 ,      2]
+[3,       7 ,      3]
+[4,       1 ,      4]
+
+*/
