@@ -117,7 +117,18 @@ export default function pattern(n) {
  *  *
  */
 
-/* Solution 6 */
+/* Solution 6
+export default function pattern(n) {
+  for (let i = 0; i < n; i++) {
+    let numbersLine = ''
+    for (let j = 0; j < n - i; j++) {
+      numbersLine += `* `
+    }
+    console.log(`${numbersLine}`)
+  }
+}
+--- */
+
 export default function pattern(n) {
   for (let i = 0; i < n; i++) {
     let numbersLine = ''
