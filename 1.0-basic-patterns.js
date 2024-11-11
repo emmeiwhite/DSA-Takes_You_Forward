@@ -97,11 +97,32 @@ export default function pattern(n) {
  *  1
  */
 
+/* Solution 5
 export default function pattern(n) {
   for (let i = 0; i < n; i++) {
     let numbersLine = ''
     for (let j = 0; j < n - i; j++) {
       numbersLine += `${j + 1} `
+    }
+    console.log(`${numbersLine}`)
+  }
+}
+--- */
+
+/** Patter-6
+ *  * * * * *
+ *  * * * *
+ *  * * *
+ *  * *
+ *  *
+ */
+
+/* Solution 6 */
+export default function pattern(n) {
+  for (let i = 0; i < n; i++) {
+    let numbersLine = ''
+    for (let j = 0; j < n - i; j++) {
+      numbersLine += `* `
     }
     console.log(`${numbersLine}`)
   }
