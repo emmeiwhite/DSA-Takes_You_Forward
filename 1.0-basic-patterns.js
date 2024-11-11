@@ -4,7 +4,7 @@
  *  * * * * *
  *  * * * * *
  */
-/**  Solution-1
+/**  Solution-1 
 export default function pattern(n) {
   for (let i = 0; i < n; i++) {
     let starsInLine = ''
@@ -15,7 +15,7 @@ export default function pattern(n) {
     console.log(`\n`)
   }
 }
-
+  */
 
 /** Patter-2
  *  *
@@ -25,7 +25,7 @@ export default function pattern(n) {
  *  * * * * *
  */
 
-/** Solution 2  */
+/** Solution 2 
 export default function pattern(n) {
   for (let i = 0; i < n; i++) {
     let starsInLine = ''
@@ -35,6 +35,7 @@ export default function pattern(n) {
     console.log(`${starsInLine}`)
   }
 }
+---  */
 
 /** Patter-3
  *  1
@@ -64,7 +65,7 @@ export default function pattern(n) {
  *  5 5 5 5 5
  */
 
-/** Solution-4
+/** Solution-4 (WRONG SOLUTION!)
 export default function pattern(n) {
   for (let i = 0; i < n; i++) {
     let numbersLine = ''
@@ -75,3 +76,14 @@ export default function pattern(n) {
   }
 }
 --- */
+
+/*----- BUG FIX -----*/
+export default function pattern(n) {
+  for (let i = 0; i < n; i++) {
+    let numbersLine = ''
+    for (let j = 0; j <= i; j++) {
+      numbersLine += `${i + 1} ` // Pattern outputs i each time here, we have to be cautious of the requirement
+    }
+    console.log(`${numbersLine}`)
+  }
+}
