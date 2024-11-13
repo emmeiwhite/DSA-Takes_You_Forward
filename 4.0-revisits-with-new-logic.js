@@ -52,4 +52,25 @@ For First & Third Right Angled Triangle, i is directly connected to j,
 
    Outer loop is not to be considered in rendering logic, just for formula purpose
 
+   🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+   So, here we go for the First and Third Right Angled triangle, Again remember Imran, We have to render j number of spaces, and we must spend energy on this only.
+  
+   Starting with i=0;
+   let row = '';
+   for(let j=0; j<i;j++){
+      row+='-'
+   }
+   
+   j will run 0 times
+
+   Then when i becomes 1, i=1;
+   j runs 1 times (for j=0, condition satisfies) so with print one space
+
+   Then when i becomes 2, i=1;
+    j runs 2 times (for j=0,1 condition satisfies) so with print two spaces
+
+     Then when i becomes 2, i=1;
+    j runs 2 times (for j=0,1 condition satisfies) so with print two spaces
+
+   ----------------------------------(()) --------------------------------
 */
