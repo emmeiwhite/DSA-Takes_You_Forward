@@ -68,7 +68,7 @@ export default function intermediatePatterns(n) {
 // Let's Follow this logic (USING 3 independent sub-loops)
 
 /*  --- 3 loops within, One to render stars, two to render spaces
-  
+
 space,  stars,   space
 [0,       9 ,      0]
 [1,       7 ,      1]
