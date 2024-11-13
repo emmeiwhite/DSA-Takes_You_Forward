@@ -124,3 +124,27 @@ For First & Third Right Angled Triangle, i is directly connected to j,
 
  That's it! That's how we step by step reach to the desired output.
 */
+
+/** --- TIME TO CODE   --- */
+
+export default function intermediatePatterns(n) {
+  for (let i = 0; i < n; i++) {
+    let row = ''
+    // First Inner Loop to print spaces [Right Angled Triangle] starting with no space
+    for (let j = 0; j < i; j++) {
+      row += '- '
+    }
+
+    //   Second Inner Loop to print star pattern
+    for (let j = 0; j < 2 * (n - i) - 1; j++) {
+      row += '* '
+    }
+
+    // Third Inner Loop to print spaces [Right Angled Triangle] starting with no space
+    for (let j = 0; j < i; j++) {
+      row += '- '
+    }
+
+    console.log(row)
+  }
+}
