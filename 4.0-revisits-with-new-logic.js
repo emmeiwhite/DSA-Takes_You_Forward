@@ -66,11 +66,61 @@ For First & Third Right Angled Triangle, i is directly connected to j,
    Then when i becomes 1, i=1;
    j runs 1 times (for j=0, condition satisfies) so with print one space
 
-   Then when i becomes 2, i=1;
+   Then when i becomes 2, i=2;
     j runs 2 times (for j=0,1 condition satisfies) so with print two spaces
 
-     Then when i becomes 2, i=1;
-    j runs 2 times (for j=0,1 condition satisfies) so with print two spaces
+   Then when i becomes 3, i=3;
+    j runs 3 times (for j=0,1,2 condition satisfies) so with print three spaces
 
+   The when i becomes 4, i=4;
+    j runs 4 times (for j=0,1,2,4 condition satisfies) so with print four spaces
    ----------------------------------(()) --------------------------------
+
+
+   🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Time to think about Second Right Angel Triangle 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+
+
+ i=0; *********  9 Stars
+ i=1;  *******   7 Stars
+ i=2;   *****    5 Stars
+ i=3;    ***     3 Stars
+ i=4;     *      1 Star
+
+ And n=5;
+ At least we must check formulate which fulfills i=0, i=1 to get started.
+
+
+ A) Initially it feels like it is straight forward; j must run exactly 2*n - 1 time.
+ 
+   Lets Analyze the formula:
+   For i=0; j will run 0 to 2*5 - 1 times, which is 9 times (excluding 9) 
+   I see this as follows:
+
+   j = [0  1  2   3   4   5  6  7  8]
+       [*  *  *   *   *   *  *  *  *]
+       So as j moves from 0th iteration to 8th iteration, for each iteration we render one star! 
+       (In JavaScript, we concat * to the previous row="" at each iteration)
+
+
+ B) When i=1; 2*n-1 gives, 2*5 - 1 which is again 9, so it doesn't work.
+
+ Then we thought of introducing 'i' in the formula & came up with 2*n-1-i
+
+ For i=0, j will run upto 2*5 -1 -0 = 9 (Iteration-1 is correct)
+ For i=1; j will run upto 2*5 -1 -1 = 8 (Which should be 7) [0 1 2 3 4 5 6] (since we need to print 7 stars)
+
+ So, this formulate again isn't working! 
+
+ C) We need find a formulate which matches our need. 9, 7, 5, 3, 1 for n = 5 & for i 0-4 [0 1 2 3 4]
+
+ I came up with 2(n-i) - 1 on notebook
+ Let's analyze;
+
+ For i=0; j runs upto 2*(5-0) - 1 = 9 times i-e.,  j = [0  1  2   3   4   5  6  7  8]
+ For i=1; j runs upto 2*(5-1) - 1 = 2*(4) - 1 which is 7 times i-e.,  j = [0  1  2   3   4   5  6 ]
+ For i=2; j runs upto 2*(5-2) - 1 = 2*(3) - 1 which is 5 times i-e.,  j = [0  1  2   3   4 ]
+ For i=3; j runs upto 2*(5-3) - 1 = 2*(2) - 1 which is 3 times i-e.,  j = [0  1  2  ]
+ For i=4; j runs upto 2*(5-4) - 1 = 2*(1) - 1 which is 1 time i-e.,  j = [0] (so j loop runs only once and we print one star for that)
+
+ That's it! That's how we step by step reach to the desired output.
 */
