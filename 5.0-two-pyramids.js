@@ -81,5 +81,48 @@ i       j=n-1-i = 4-i
 
 // let's implement
 export default function intermediatePatterns(n) {
-  console.log('hello')
+  //   Assuming n=10, let's calculate m
+
+  let m = parseInt(n / 2)
+  console.log(m)
+
+  /** A) TOP SIDE PYRAMID */
+  for (let i = 0; i < m; i++) {
+    let line = ''
+
+    /** 1) Print spaces */
+    for (let j = 0; j < m - 1 - i; j++) {
+      line += '- '
+    }
+    /** 2) Print stars */
+    for (let j = 0; j < 2 * i + 1; j++) {
+      line += '* '
+    }
+
+    /** 3) Print spaces */
+    for (let j = 0; j < m - 1 - i; j++) {
+      line += '- '
+    }
+    console.log(line)
+  }
+
+  /** B) BOTTOM SIDE PYRAMID */
+  for (let i = 0; i < m; i++) {
+    let line = ''
+
+    /** 1) Print spaces */
+    for (let j = 0; j < i; j++) {
+      line += '- '
+    }
+
+    /** 2) Print stars */
+    for (let j = 0; j < 2 * (m - i) - 1; j++) {
+      line += '* '
+    }
+    /** 3) Print spaces */
+    for (let j = 0; j < i; j++) {
+      line += '- '
+    }
+    console.log(line)
+  }
 }
