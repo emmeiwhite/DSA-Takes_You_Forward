@@ -39,14 +39,11 @@ export default function intermediatePatterns(n) {
       line += '-'
     }
 
-    //   3) Lastly we print number as per the requirement
-    // for (let j = 0; j <= ; j++) {
-    //   line += j + ' '
-    // }
+    //   3) Lastly we print number as per the requirement (This took some brain twisting and deep thinking to somehow connect j & i to fit our case)
+    for (let j = i + 1; j > 0; j--) {
+      line += j
+    }
 
-    // for (let j = 0; j <= i; j++) {
-    //   line += j + 1 + ' '
-    // }
     console.log(line)
   }
 }
