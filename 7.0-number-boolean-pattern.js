@@ -39,3 +39,15 @@ export default function intermediatePatterns(n) {
 }
 
 --- */
+
+export default function intermediatePatterns(n) {
+  for (let i = 0; i < n; i++) {
+    let line = ''
+
+    // Just a one liner optimal solution but it needs mind twisting and thinking to improve logic
+    for (let j = 0; j <= i; j++) {
+      line += (i + j) % 2 === 0 ? '1' : '0'
+    }
+    console.log(line)
+  }
+}
