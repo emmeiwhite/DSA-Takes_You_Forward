@@ -8,10 +8,14 @@
 
 // For the first time defining an outer variable : The state for this program
 
-for (let i = 0; i < 5; i++) {
-  let line = ''
-  for (let j = 0; j <= i; j++) {
-    line += '* '
+export default function intermediatePatterns(n) {
+  let currentState = 0
+  for (let i = 0; i < n; i++) {
+    let line = ''
+    for (let j = 0; j <= i; j++) {
+      currentState += 1
+      line += `${currentState} `
+    }
+    console.log(line)
   }
-  console.log(line)
 }
