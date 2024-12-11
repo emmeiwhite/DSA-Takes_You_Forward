@@ -15,10 +15,9 @@ ABCDCBA
 --- */
 
 export default function intermediatePatterns(n) {
-  let currentChar = 65
   for (let i = 0; i < n; i++) {
     let line = ''
-
+    let currentChar = 65
     //   First inner loop: For Spaces
     for (let j = 0; j < n - 1 - i; j++) {
       line += '- '
@@ -27,7 +26,18 @@ export default function intermediatePatterns(n) {
     //   Second inner loop
     for (let j = 0; j < 2 * i + 1; j++) {
       let character = String.fromCharCode(currentChar)
+
       line += `${character} `
+      //   Let's use j's mid-point to handle rendering: j have to be used wisely
+
+      // This is the real logic: I am so glad about this problem, Finished within one pomodoro!
+      if (j < i) {
+        currentChar += 1
+      }
+
+      if (j >= i) {
+        currentChar -= 1
+      }
     }
 
     //   Third inner loop: For Spaces
